@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🏏 Ultra DRS Broadcast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg1.webp') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1100px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #ffdd00, #ffaa00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 25px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(255, 196, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .video-wrapper:hover {
+      transform: scale(1.01);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 15px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 35px;
+      background: linear-gradient(90deg, #ffe600, #ffc400);
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ffc107a0;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #ffd700, #ffb300);
+      transform: scale(1.05);
+    }
+
+    /* Decorative cricket graphics */
+    .graphic {
+      position: absolute;
+      width: 90px;
+      opacity: 0.12;
+      z-index: 0;
+    }
+
+    .graphic.bat {
+      top: -30px;
+      left: -20px;
+      transform: rotate(-20deg);
+    }
+
+    .graphic.stumps {
+      bottom: -25px;
+      right: -20px;
+      transform: rotate(15deg);
+    }
+
+    .graphic.ball {
+      bottom: 50%;
+      left: -30px;
+      transform: rotate(-45deg);
+    }
+
+    /* For inserting custom photos (e.g., player image or umpire) */
+    .photo-area {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .photo-area img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Decorative graphics -->
+  <img src="https://img.icons8.com/emoji/96/cricket-bat-and-ball.png" class="graphic bat" />
+<img src="https://img.icons8.com/color/96/cricket.png" class="graphic stumps" />
+<img src="https://img.icons8.com/color/96/cricket-ball.png" class="graphic ball" />
+
+
+  <img src="logo.webp" alt="WORLD CUP 2019 Logo"
+  style="width: 120px; display: block; margin: 0 auto 20px;" />
+
+  <h1>🏏 Ultra DRS Broadcast</h1>
+  <p>Experience the Decision Review System in full style with cinematic visuals and a real-match feel.</p>
+
+  <div class="video-wrapper">
+    <video id="video" src="download.mp4" poster="LBW-Full-Form-in-Cricket.webp" controls></video>
+  </div>
+
+  <div class="photo-area">
+    <p>📸 Featured Snapshot</p>
+    <!-- You can replace the image below with a custom image: umpire, batsman, etc. -->
+    <img src="decision.webp" alt="Umpire Decision Moment" />
+  </div>
+
+  <a class="btn" href="download.mp4" download>⬇ Download Final DRS Video</a>
+</div>
+
+</body>
+</html>
